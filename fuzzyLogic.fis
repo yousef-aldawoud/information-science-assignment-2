@@ -1,0 +1,39 @@
+[System]
+Name='fu'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=2
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Bare_Nuclei'
+Range=[1 10]
+NumMFs=3
+MF1='low':'trimf',[-2.73 1.02 3.03571428571429]
+MF2='med':'trimf',[2.61 5.5 8.488]
+MF3='high':'trimf',[7.41666666666667 10 13.8]
+
+[Input2]
+Name='Mitoses'
+Range=[1 10]
+NumMFs=3
+MF1='low':'trimf',[-2.75 1 4.75]
+MF2='med':'trimf',[3.27 5.5 8.55952380952381]
+MF3='high':'trimf',[7.79761904761905 10 13.8]
+
+[Output1]
+Name='output1'
+Range=[2 4]
+NumMFs=2
+MF1='mil':'trimf',[2.14 2.65 3.47354497354497]
+MF2='bi':'trimf',[2.07243386243386 2.55243386243386 3.38359788359788]
+
+[Rules]
+3 3, 2 (1) : 1
+1 1, 1 (1) : 1

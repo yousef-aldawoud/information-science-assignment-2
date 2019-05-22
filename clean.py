@@ -9,7 +9,7 @@ def representsInt(s):
         return False
 def makeRow(arr):
     res = ""
-    for x in row:
+    for x in arr:
         res = res+x+","
     return res
 with open('breast-cancer-wisconsin.csv') as csv_file:
@@ -25,4 +25,4 @@ with open('breast-cancer-wisconsin.csv') as csv_file:
     f = open("breast-cancer-clean-data.csv", "a")
     f.write(result)
     f.close()
-    print(f'Processed {line_count} lines.')
+    print('Processed {line_count} lines.')
